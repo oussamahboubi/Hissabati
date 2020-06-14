@@ -1,5 +1,7 @@
 {
   "name": "Hissabati",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,17 +1,34 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Tab 2
+      Tableau des entrées
     </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="exportCSV()">
+        Export
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ngx-datatable [rows]="rows" [ngClass]="tableStyle"
+                 [rowHeight]="'auto'" [headerHeight]="50"
+                 [columnMode]="'force'" [columns]="columns">
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
+    <!--
+        <ngx-datatable-column name="Actions" [sortable]="false">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        <ion-button size="small" fill="outline" (click)="open(row)">Details</ion-button>
+      </ng-template>
+    </ngx-datatable-column><ngx-datatable-column name="Age"></ngx-datatable-column>
+    <ngx-datatable-column name="Nom"></ngx-datatable-column>
+    <ngx-datatable-column name="N°"></ngx-datatable-column>
+    <ngx-datatable-column name="Montant"></ngx-datatable-column>
+    <ngx-datatable-column name="Date"></ngx-datatable-column>-->
+  </ngx-datatable>
 </ion-content>
+
+
